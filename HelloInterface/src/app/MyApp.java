@@ -14,22 +14,40 @@ public class MyApp {
 
         Button button = new Button();
         button.setText("Enviar");
-        button.setClickListener(new MyClickListener());
+        MyClickListener myClickListener = new MyClickListener();
+        button.setClickListener(myClickListener);
 
         tela.addView(button);
 
         Button btnSair = new Button();
         btnSair.setText("Acabou");
-        btnSair.setClickListener(new ClickListener() {
+
+        // classe anomima
+        btnSair.setClickListener(new View.ClickListener() {
             @Override
             public void action() {
                 System.out.println("Tchau!!");
             }
         });
 
+        btnSair.setClickListener(() -> {
+            System.out.println("Hello");
+        });
+
         tela.addView(btnSair);
 
         button.click();
         btnSair.click();
+
+        int [] numero [];
+        
+
+
     }
 }
+
+
+
+
+
+

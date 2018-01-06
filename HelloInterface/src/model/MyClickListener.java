@@ -1,6 +1,6 @@
 package model;
 
-public class MyClickListener implements ClickListener {
+public class MyClickListener implements View.ClickListener {
 
     @Override
     public void action() {

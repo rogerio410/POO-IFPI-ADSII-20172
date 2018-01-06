@@ -16,4 +16,11 @@ public abstract class View {
     public void setClickListener(ClickListener clickListener) {
         this.clickListener = clickListener;
     }
+
+    public interface ClickListener {
+
+        void action();
+
+    }
+
 }
